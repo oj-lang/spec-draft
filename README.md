@@ -40,9 +40,28 @@ circle :=
         return PI * r ^ 2
 ```
 
+## Variables
+
+OJ lang is static-typed. The compiler will always try to guess the data type if possible.
+
+```
+int a
+int a[10]
+```
+
+```
+result = func()
+```
+
+`result` will take the data type from function `func`.
+
 ## Input & output stream
 
 Input
+
+`input` is a special function. You cannot define function like input in OJ.
+
+Its return type is NOT-determined, but base on who gets the return value.
 
 ```
 int a, b = input()
@@ -69,3 +88,23 @@ for i in [1..100]
 while {condition}
     # do something
 ```
+
+## Functions
+
+```
+func = (x) ->
+    # do something
+    return 1
+```
+
+The input type will be guessed from the usage of this function. (If ambigious, the compiler will complain.)
+
+You can also set the input type and default value.
+
+```
+func = (int x, int y = 10) ->
+    # do something
+```
+
+All functions should have static return value. However you don't need to to specified it.
+If there are multiple return statements in a function, their return types should matches.
