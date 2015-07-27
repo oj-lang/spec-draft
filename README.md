@@ -17,6 +17,29 @@ a = array<int>(100)
 a = queue<int>
 ```
 
+Self-define types
+
+```
+pair := int[2]
+# or
+pair := array<int>[2]
+```
+
+```
+node :=
+    x: int
+    y: int
+```
+
+```
+circle :=
+    x: int
+    y: int
+    r: int
+    area: ->
+        return PI * r ^ 2
+```
+
 ## Input & output stream
 
 Input
