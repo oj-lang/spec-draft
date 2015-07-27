@@ -4,7 +4,9 @@
 
 Basic: `int`, `long`, `bool`, `string`
 
-Special: array, queue, list(?), set, map
+Special: bigint, bigdec
+
+Structure: array, queue, list(?), set, map
 
 Define
 
