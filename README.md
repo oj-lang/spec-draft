@@ -14,8 +14,8 @@ Structure: list, set, map
 
 | Index Access | Iterator Insert/Remove | Implementation |
 |:------------:|:----------------------:|:--------------:|
-| No           | Any                    | List           |
-| Yes          | No                     | Vector         |
+| Any          | No                     | Vector         |
+| No           | Yes                    | List           |
 | Yes          | Yes                    | Deque          |
 
 ###
