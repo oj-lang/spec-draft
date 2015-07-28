@@ -1,5 +1,7 @@
 # Orange Juice Language Specifications
 
+This is NOT a strict specification (yet). Just write down some thoughts on how this language should be.
+
 ## Data Types
 
 Basic: `int`, `long`, `bool`, `string`
@@ -8,7 +10,10 @@ Special: bigint, bigdec
 
 Structure: list, set, map
 
-Self-define types
+When compile into C++, list may be implemented using vector, queue, or list, depending on how the list is used.
+(This might be changed if the implementation is too difficult.)
+
+Self-define types.
 
 ```
 pair := int[2]
@@ -67,6 +72,7 @@ Its return type is NOT-determined, but base on who gets the return value.
 ```
 int a, b = input()
 int arr[a]
+# The input line will be splited by space and the items will be write into arr[0], arr[1], respectively.
 arr = input()
 arr[1:] = input()
 ```
