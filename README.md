@@ -106,7 +106,7 @@ arr[1:] = input()
 print  # Print a blank line
 print a
 print a, b  # Space between a and b
-print str(a) + str(b)  # No space between a and b
+print a.to_str() + b.to_str()  # No space between a and b
 print a,  # No new line or space in the end.
 ```
 
@@ -208,14 +208,6 @@ func()
 func(a)
 func a
 ```
-
-### Pre-defined functions
-
-* `len` - Length of variable. Reading from `len` method for self-defined types.
-* `str` - The `to_str` value of variables.
-* `int` - The `to_int` value of variables.
-* `sort` - Sort the sequence.
-* `copy` - Clone an object. It is built-in.
 
 ## Classes
 
