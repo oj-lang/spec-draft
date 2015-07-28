@@ -13,6 +13,7 @@ Structure: list, set, map
 `list` my be translated into different implemtation in C++.
 
 | Index Access | Iterator Insert/Remove | Implementation |
+|:------------:|:----------------------:|:--------------:|
 | No           | Any                    | List           |
 | Yes          | No                     | Vector         |
 | Yes          | Yes                    | Deque          |
