@@ -14,11 +14,11 @@ Structure: array, list, set, map
 
 ### Array
 
-Array can be accessed by index in O(1). Can add or remove item from the back.
+Array can be accessed by index in O(1). Can add or remove item from the back in O(1). Items can be added and removed in any places in O(n).
 
 ### List
 
-List can be accessed by index in O(n). Items can be added and removed in any places.
+List can be accessed by index in O(n). Can add or remove item from the front and back in O(1). Items can be added and removed in any places in O(n).
 
 ###
 
