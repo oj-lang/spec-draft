@@ -8,17 +8,14 @@ Basic: `int`, `long`, `bool`, `string`
 
 Special: bigint, bigdec
 
-Structure: array, list, set, map
+Structure: list, set, map
 
-`array` will be translated into C++ `vector` and `list` will be translated into C++ `list`.
+`list` my be translated into different implemtation in C++.
 
-### Array
-
-Array can be accessed by index in O(1). Can add or remove item from the back in O(1). Items can be added and removed in any places in O(n).
-
-### List
-
-List can be accessed by index in O(n). Can add or remove item from the *front* and back in O(1). Items can be added and removed in any places in O(n). (So the difference with array is only add and remove from front?)
+| Index Access | Iterator Insert/Remove | Implementation |
+| No           | Any                    | List           |
+| Yes          | No                     | Vector         |
+| Yes          | Yes                    | Deque          |
 
 ###
 
@@ -27,7 +24,7 @@ Self-define types.
 ```
 pair := int[2]
 # or
-pair := array<int>[2]
+pair := list<int>[2]
 ```
 
 ```
@@ -59,7 +56,7 @@ int a[]
 # List with fixed length
 int a[100]
 # Same as above
-a = array<int>(100)
+a = list<int>(100)
 ```
 
 Implicitly declare of variables. In the example below, the type of result is defined by the return value of `func`.
