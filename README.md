@@ -123,6 +123,8 @@ while {condition}
 
 ### Define functions
 
+#### Getting parameters
+
 ```
 func = (x) ->
     # do something
@@ -151,4 +153,31 @@ func = (x) -> (long)
     return 1
 ```
 
+#### Setting return values
+
+A function may have one or more return value. There are two ways to set return values.
+
+First is to use return statements, shown as our example above.
+
+Second is to declare return value in function signiture.
+
+```
+func = (x) -> (long y)
+    y = x * x
+```
+
 ### Calling functions
+
+To call a function with no parameters, use `()`.
+
+```
+func()
+```
+
+To call a function with parameters, `()` is optional.
+
+```
+func a
+# is the same as
+func(a)
+```
