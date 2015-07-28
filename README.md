@@ -103,15 +103,15 @@ arr[1:] = input()
 Output
 
 ```
-print a
-print a, b
+print(a)
+print(a, b)
 ```
 
 ## Looping
 
 ```
 for i in [1..100]
-    print i
+    print(i)
 ```
 
 ```
@@ -168,16 +168,9 @@ func = (x) -> (long y)
 
 ### Calling functions
 
-To call a function with no parameters, use `()`.
+Use `()` to call a function.
 
 ```
 func()
-```
-
-To call a function with parameters, `()` is optional.
-
-```
-func a
-# is the same as
 func(a)
 ```
