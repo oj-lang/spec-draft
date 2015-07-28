@@ -86,9 +86,9 @@ result = func()
 
 ## Input & output stream
 
-Input
+`input` and `output` are special functions. You cannot define function like them in OJ.
 
-`input` is a special function. You cannot define function like input in OJ.
+### Input
 
 Its return type is NOT-determined, but base on who gets the return value.
 
@@ -100,18 +100,21 @@ arr = input()
 arr[1:] = input()
 ```
 
-Output
+### Output
 
 ```
-print(a)
-print(a, b)
+print  # Print a blank line
+print a
+print a, b  # Space between a and b
+print str(a) + str(b)  # No space between a and b
+print a,  # No new line or space in the end.
 ```
 
 ## Looping
 
 ```
 for i in [1..100]
-    print(i)
+    print i
 ```
 
 ```
@@ -168,9 +171,10 @@ func = (x) -> (long y)
 
 ### Calling functions
 
-Use `()` to call a function.
+Use `()` to call a function. If there is more than one paramaters, `()` is optional.
 
 ```
 func()
 func(a)
+func a
 ```
