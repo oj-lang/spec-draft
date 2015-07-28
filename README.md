@@ -115,3 +115,13 @@ func = (int x, int y = 10) ->
 
 All functions should have static return value. However you don't need to to specified it.
 If there are multiple return statements in a function, their return types should matches.
+
+Explicitly specify return type.
+
+Sometimes it would be convenient to specify the function's return type,
+e.g. when you want to cast the return value into `long` instead of `int`.
+
+```
+func = (x) -> (long)
+    return 1
+```
