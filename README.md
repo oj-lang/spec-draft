@@ -200,7 +200,7 @@ func a
 * `str` - The `to_str` value of variables.
 * `int` - The `to_int` value of variables.
 * `sort` - Sort the sequence.
-* `copy` - Clone an object.
+* `copy` - Clone an object. It is built-in.
 
 ## Classes
 
