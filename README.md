@@ -59,6 +59,8 @@ circle :=
         return PI * @r ^ 2
 ```
 
+Self defined types with methods are classes. They have inheritance. See classes section for detials.
+
 ## Variables
 
 OJ lang is static-typed. The compiler will always try to guess the data type if possible.
