@@ -143,6 +143,14 @@ for index, iter, a in arr
 #### Getting parameters
 
 ```
+func = (x) ->
+    return x ^ 2
+```
+
+Parameter type is optional. It will be guessed from usage.
+If more then one usage occurs, the compiler will create overloading.
+
+```
 func = (int x, int y = 10) ->
     # do something
 ```
