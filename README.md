@@ -192,3 +192,47 @@ func()
 func(a)
 func a
 ```
+
+### Pre-defined functions
+
+* `len` - Length of variable. Reading from `len` method for self-defined types.
+* `str` - The `to_str` value of variables.
+* `int` - The `to_int` value of variables.
+* `sort` - Sort the sequence.
+* `copy` - Clone an object.
+
+## Classes
+
+Classes are just self defined types.
+
+```
+circle :=
+    x: int
+    y: int
+    r: int
+    area: ->
+        return PI * @r ^ 2
+```
+
+Initialize a class.
+
+```
+c = circle()
+c.x = 100
+cc = circle(x: 100)
+```
+
+### Constructor
+
+```
+circle :=
+    x: int
+    y: int
+    r: int
+    ctor: (x, y) ->
+        @x = x
+        @y = y
+        @r = 10
+    area: ->
+        return PI * @r ^ 2
+```
