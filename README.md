@@ -6,25 +6,14 @@ Basic: `int`, `long`, `bool`, `string`
 
 Special: bigint, bigdec
 
-Structure: array, queue, list(?), set, map
-
-Define
-
-```
-int a
-int a, b
-int a[]
-int a[100]
-a = array<int>(100)
-a = queue<int>
-```
+Structure: list, set, map
 
 Self-define types
 
 ```
 pair := int[2]
 # or
-pair := array<int>[2]
+pair := list<int>[2]
 ```
 
 ```
@@ -47,9 +36,19 @@ circle :=
 OJ lang is static-typed. The compiler will always try to guess the data type if possible.
 
 ```
+# One variable
 int a
-int a[10]
+# Multiple variables of same type
+int a, b
+# List without fixed length
+int a[]
+# List with fixed length
+int a[100]
+# Same as above
+a = list<int>(100)
 ```
+
+Implicitly declare of variables. In the example below, the type of result is defined by the return value of `func`.
 
 ```
 result = func()
