@@ -4,13 +4,25 @@ This is NOT a strict specification (yet). Just write down some thoughts on how t
 
 ## Data Types
 
-Basic: `int`, `long`, `bool`, `string`
+### Basic
 
-Special: bigint, bigdec
+`int`, `long`, `bool`, `string`
 
-Structure: list, set, map
+Passed by value.
 
-`list` my be translated into different implemtation in C++.
+### Special
+
+Predefined advanced data types.
+
+bigint, bigdec
+
+### Container
+
+* `seq` - a sequence of items
+* `set` - a sequence of unique items
+* `map` - a dictionary of items
+
+`seq` my be translated into different implemtation in C++.
 
 | Index Access | Iterator Insert/Remove | Implementation |
 |:------------:|:----------------------:|:--------------:|
@@ -18,15 +30,17 @@ Structure: list, set, map
 | No           | Yes                    | List           |
 | Yes          | Yes                    | Deque          |
 
-###
+### Self-define types
 
-Self-define types.
+From system-defined types.
 
 ```
 pair := int[2]
 # or
-pair := list<int>[2]
+pair := seq<int>[2]
 ```
+
+From attributes.
 
 ```
 node :=
@@ -34,13 +48,15 @@ node :=
     y: int
 ```
 
+With methods.
+
 ```
 circle :=
     x: int
     y: int
     r: int
     area: ->
-        return PI * r ^ 2
+        return PI * @r ^ 2
 ```
 
 ## Variables
@@ -54,10 +70,10 @@ int a
 int a, b
 # List without fixed length
 int a[]
-# List with fixed length
+# A sequence with fixed length
 int a[100]
 # Same as above
-a = list<int>(100)
+a = seq<int>(100)
 ```
 
 Implicitly declare of variables. In the example below, the type of result is defined by the return value of `func`.
@@ -105,6 +121,8 @@ while {condition}
 
 ## Functions
 
+### Define functions
+
 ```
 func = (x) ->
     # do something
@@ -132,3 +150,5 @@ e.g. when you want to cast the return value into `long` instead of `int`.
 func = (x) -> (long)
     return 1
 ```
+
+### Calling functions
