@@ -8,8 +8,6 @@ This is NOT a strict specification (yet). Just write down some thoughts on how t
 
 `int`, `long`, `bool`, `string`
 
-Passed by value.
-
 ### Special
 
 Predefined advanced data types.
@@ -161,6 +159,13 @@ Optional parameters must be put after required parameters.
 
 All functions should have static return value. However you don't need to to specified it.
 If there are multiple return statements in a function, their return types should matches.
+
+By default all variable will be passed by value. You can declare so that the variable will be passed by reference.
+
+```
+func = (&x) ->
+    x = x * 2
+```
 
 Explicitly specify return type.
 
