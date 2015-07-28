@@ -8,17 +8,16 @@ Basic: `int`, `long`, `bool`, `string`
 
 Special: bigint, bigdec
 
-Structure: list, set, map
+Structure: array, list, set, map
 
-When compile into C++, list may be implemented using vector, queue, or list, depending on how the list is used.
-(This might be changed if the implementation is too difficult.)
+`array` will be translated into C++ `vector` and `list` will be translated into C++ `list`.
 
 Self-define types.
 
 ```
 pair := int[2]
 # or
-pair := list<int>[2]
+pair := array<int>[2]
 ```
 
 ```
@@ -50,7 +49,7 @@ int a[]
 # List with fixed length
 int a[100]
 # Same as above
-a = list<int>(100)
+a = array<int>(100)
 ```
 
 Implicitly declare of variables. In the example below, the type of result is defined by the return value of `func`.
