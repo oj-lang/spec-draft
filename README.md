@@ -143,19 +143,11 @@ for index, iter, a in arr
 #### Getting parameters
 
 ```
-func = (x) ->
-    # do something
-    return 1
-```
-
-The input type will be guessed from the usage of this function. (If ambigious, the compiler will complain.)
-
-You can also set the input type and default value.
-
-```
 func = (int x, int y = 10) ->
     # do something
 ```
+
+Optional parameters must be put after required parameters.
 
 All functions should have static return value. However you don't need to to specified it.
 If there are multiple return statements in a function, their return types should matches.
@@ -166,7 +158,7 @@ Sometimes it would be convenient to specify the function's return type,
 e.g. when you want to cast the return value into `long` instead of `int`.
 
 ```
-func = (x) -> (long)
+func = (int x) -> (long)
     return 1
 ```
 
@@ -179,9 +171,18 @@ First is to use return statements, shown as our example above.
 Second is to declare return value in function signiture.
 
 ```
-func = (x) -> (long y)
+func = (int x) -> (long y)
     y = x * x
 ```
+
+Return value can also have default value
+
+```
+func = (int x) -> (long y = 0)
+    y = x * x
+```
+
+You can still use return statement in this case. If you change the return value from the left.
 
 ### Calling functions
 
@@ -210,7 +211,7 @@ circle :=
     x: int
     y: int
     r: int
-    area: ->
+    area: -> (long)
         return PI * @r ^ 2
 ```
 
@@ -229,7 +230,7 @@ circle :=
     x: int
     y: int
     r: int
-    ctor: (x, y) ->
+    ctor: (int x, int y) ->
         @x = x
         @y = y
         @r = 10
