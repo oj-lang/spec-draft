@@ -12,6 +12,16 @@ Structure: array, list, set, map
 
 `array` will be translated into C++ `vector` and `list` will be translated into C++ `list`.
 
+### Array
+
+Array can be accessed by index in O(1). Can add or remove item from the back.
+
+### List
+
+List can be accessed by index in O(n). Items can be added and removed in any places.
+
+###
+
 Self-define types.
 
 ```
