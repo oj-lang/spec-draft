@@ -8,6 +8,8 @@ This is NOT a strict specification (yet). Just write down some thoughts on how t
 
 `int`, `long`, `bool`, `string`
 
+Basic types will be passed by value. All other data types will be passed by reference.
+
 ### Special
 
 Predefined advanced data types.
@@ -58,6 +60,15 @@ circle :=
 ```
 
 Self defined types with methods are classes. They have inheritance. See classes section for detials.
+
+### Pass by value
+
+Since OJ does not allow pass by value for function calls, you may clone an object if you need to modify its content.
+
+```
+int a[100]
+b = a.clone()
+```
 
 ## Variables
 
@@ -159,13 +170,6 @@ Optional parameters must be put after required parameters.
 
 All functions should have static return value. However you don't need to to specified it.
 If there are multiple return statements in a function, their return types should matches.
-
-By default all variable will be passed by value. You can declare so that the variable will be passed by reference.
-
-```
-func = (&x) ->
-    x = x * 2
-```
 
 Explicitly specify return type.
 
