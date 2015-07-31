@@ -218,7 +218,7 @@ func a
 Classes are just self defined types.
 
 ```
-circle :=
+Circle :=
     x: int
     y: int
     r: int
@@ -229,9 +229,9 @@ circle :=
 Initialize a class.
 
 ```
-c = circle()
+c = Circle()
 c.x = 100
-cc = circle(x: 100)
+cc = Circle(x: 100)
 ```
 
 ### Constructor
