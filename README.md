@@ -35,15 +35,15 @@ Predefined advanced data types.
 From system-defined types.
 
 ```
-pair := int[2]
+Pair := int[2]
 # or
-pair := List<int>[2]
+Pair := List<int>[2]
 ```
 
 From attributes.
 
 ```
-node :=
+Node :=
     x: int
     y: int
 ```
@@ -51,7 +51,7 @@ node :=
 With methods.
 
 ```
-circle :=
+Circle :=
     x: int
     y: int
     r: int
@@ -237,7 +237,7 @@ cc = circle(x: 100)
 ### Constructor
 
 ```
-circle :=
+Circle :=
     x: int
     y: int
     r: int
