@@ -117,7 +117,7 @@ arr[1:] = input()
 print  # Print a blank line
 print a
 print a, b  # Space between a and b
-print a.to_str() + b.to_str()  # No space between a and b
+print a . b  # dot is for connecting strings.
 print a,  # No new line or space in the end.
 ```
 
