@@ -14,15 +14,15 @@ Basic types will be passed by value. All other data types will be passed by refe
 
 Predefined advanced data types.
 
-bigint, bigdec
+`BigInt`, `BigDec`
 
 ### Container
 
-* `seq` - a sequence of items
-* `set` - a sequence of unique items
-* `map` - a dictionary of items
+* `List` - a sequence of items
+* `Set` - a sequence of unique items
+* `Map` - a dictionary of items
 
-`seq` my be translated into different implemtation in C++.
+`List` my be translated into different implemtation in C++.
 
 | Index Access | Iterator Insert/Remove | Implementation |
 |:------------:|:----------------------:|:--------------:|
@@ -37,7 +37,7 @@ From system-defined types.
 ```
 pair := int[2]
 # or
-pair := seq<int>[2]
+pair := List<int>[2]
 ```
 
 From attributes.
@@ -84,7 +84,7 @@ int a[]
 # A sequence with fixed length
 int a[100]
 # Same as above
-a = seq<int>(100)
+a = List<int>(100)
 ```
 
 Implicitly declare of variables. In the example below, the type of result is defined by the return value of `func`.
