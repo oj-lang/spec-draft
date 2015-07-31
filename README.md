@@ -248,3 +248,18 @@ Circle :=
     area: ->
         return PI * @r ^ 2
 ```
+
+### Inheritance
+
+```
+ColorCircle := Circle
+    x: int
+    y: int
+    r: int
+    ctor: (int x, int y) ->
+        @x = x
+        @y = y
+        @r = 10
+    area: ->
+        return PI * @r ^ 2
+```
