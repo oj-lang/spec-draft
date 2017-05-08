@@ -104,21 +104,15 @@ result = func()
 Its return type is NOT-determined, but base on who gets the return value.
 
 ```
-int a, b = input()
-int arr[a]
-# The input line will be splited by space and the items will be write into arr[0], arr[1], respectively.
-arr = input()
-arr[1:] = input()
+int a, b
+>> a >> b
 ```
 
 ### Output
 
 ```
-print  # Print a blank line
-print a
-print a, b  # Space between a and b
-print a . b  # dot is for connecting strings.
-print a,  # No new line or space in the end.
+<< a << " " << b
+<< "%s %s" % (a, b)
 ```
 
 ## Looping
