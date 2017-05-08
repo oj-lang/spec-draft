@@ -105,14 +105,14 @@ Its return type is NOT-determined, but base on who gets the return value.
 
 ```
 int a, b
->> a >> b
+input a, b
 ```
 
 ### Output
 
 ```
-<< a << " " << b
-<< "%s %s" % (a, b)
+print a, " ", b
+print "%s %s" % (a, b)
 ```
 
 ## Looping
@@ -133,11 +133,7 @@ int arr[100]  # A sequence of 100 items
 for a in arr
     print a  ## Print all items in arr
 
-for iter, a in arr
-    # iter is an iterator of arr
-    arr.remove(iter)  # Use of iterator in sequence modification is generally more efficient.
-
-for index, iter, a in arr
+for index, a in arr
     # index is a counter for the iteration. It starts from 0.
 ```
 
