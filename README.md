@@ -34,16 +34,10 @@ Predefined advanced data types.
 
 From system-defined types.
 
-```
-Pair := int[2]
-# or
-Pair := List<int>[2]
-```
-
 From attributes.
 
 ```
-Node :=
+struct Node
     x: int
     y: int
 ```
@@ -51,7 +45,7 @@ Node :=
 With methods.
 
 ```
-Circle :=
+struct Circle
     x: int
     y: int
     r: int
@@ -63,7 +57,8 @@ Self defined types with methods are classes. They have inheritance. See classes 
 
 ### Pass by value
 
-Since OJ does not allow pass by value for function calls, you may clone an object if you need to modify its content.
+OJ always pass by value. For array, OJ will pass the pointer to the array. So modifying the array will
+affect its content. You may wish to clone the array.
 
 ```
 int a[100]
@@ -84,7 +79,9 @@ int a[]
 # A sequence with fixed length
 int a[100]
 # Same as above
-a = List<int>(100)
+var a = List<int>(100)
+# Defined type
+var a = Node(100, 100)
 ```
 
 Implicitly declare of variables. In the example below, the type of result is defined by the return value of `func`.
