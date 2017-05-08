@@ -37,7 +37,7 @@ From system-defined types.
 From attributes.
 
 ```
-struct Node
+class Node
     x: int
     y: int
 ```
@@ -45,7 +45,7 @@ struct Node
 With methods.
 
 ```
-struct Circle
+class Circle
     x: int
     y: int
     r: int
